@@ -1,0 +1,42 @@
+# Создаем пользователя:
+POST http://localhost:8080/user
+Content-Type: application/json
+
+{
+  "email": "example@example.com",
+  "password": "BsN35sf"
+}
+
+###
+
+# Создаем объявление:
+POST http://localhost:8080/adv
+Content-Type: application/json
+
+{
+  "title": "Lorem ipsum",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "owner": "1"
+}
+
+###
+
+# Редактируем объявление:
+PATCH http://localhost:8080/adv/1
+Content-Type: application/json
+
+{
+  "description": "Nullam id mollis sem. Morbi a risus nisl."
+}
+
+###
+
+# Получаем объявление:
+GET http://localhost:8080/adv/1
+Content-Type: application/json
+
+###
+
+# Удаляем объявление:
+DELETE http://localhost:8080/adv/1
+Content-Type: application/json
